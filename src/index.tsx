@@ -1,18 +1,13 @@
+import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  ApolloProvider,
-  ApolloClient,
-  InMemoryCache,
-  createHttpLink,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
-import "./styles/index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./styles/index.scss";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000/graphql",
+  uri: "https://flyby-gateway.onrender.com/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -29,15 +24,12 @@ const authLink = setContext((_, { headers }) => {
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
-  // uri: "http://localhost:4000/graphql", // change to YOUR own production server
   cache: new InMemoryCache(),
   name: "web-client",
   version: "1.0",
 });
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
