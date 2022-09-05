@@ -1,0 +1,16 @@
+.Tour {
+  display: flex;
+  justify-content: space-between;
+  margin: 8rem auto;
+  .btn {
+    background-color: inherit;
+    color: inherit;
+    border: inherit;
+    font-size: 3rem;
+
+    &:hover {
+      cursor: pointer;
+      color: yellow;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.Crew {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 7.6rem;
+  .content {
+    width: 48rem;
+    .title {
+      margin-bottom: 10rem;
+    }
+    .role {
+      margin-bottom: 2rem;
+      color: rgba(250, 250, 250, 0.5);
+    }
+    .name {
+      margin-left: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .decs {
+      margin-bottom: 8rem;
+    }
+    .options {
+      display: flex;
+      .is-active {
+        background-color: white;
+      }
+      &__item {
+        // border: 1px solid rgba(250, 250, 250, 0.5);
+        border-radius: 50%;
+        margin-right: 3rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: rgba(250, 250, 250, 0.5);
+        &:hover {
+          background-color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  //   margin-left: 3rem;
+  //   .content {
+  //     .title {
+
+  //     }
+  //   }
+  .image {
+    width: 45rem;
+    height: 55rem;
+  }
+}

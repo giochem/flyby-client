@@ -1,0 +1,26 @@
+.TourItem {
+  display: none;
+}
+.Active {
+  width: 100rem;
+  height: 50rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  .image {
+    max-width: 40rem;
+    max-height: 40rem;
+  }
+  .btn-registration {
+    margin-top: 2rem;
+    border-radius: 5px;
+    background: inherit;
+    height: 4rem;
+    &:hover {
+      cursor: pointer;
+      background: orange;
+    }
+  }
+}
